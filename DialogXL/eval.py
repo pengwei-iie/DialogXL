@@ -33,12 +33,12 @@ if __name__ == '__main__':
     path = './saved/IEMOCAP/'
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('--bert_model_dir', type=str, default='/data/SHENWZH/models/xlnet_base/')
-    parser.add_argument('--bert_tokenizer_dir', type=str, default='/data/SHENWZH/models/xlnet_base/')
+    parser.add_argument('--bert_model_dir', type=str, default='/data1/pytorch-plm-models/XLNet-base/')
+    parser.add_argument('--bert_tokenizer_dir', type=str, default='/data1/pytorch-plm-models/XLNet-base/')
     parser.add_argument('--basemodel', type=str, default='xlnet_dialog', choices=['xlnet', 'transfo_xl', 'bert', 'xlnet_dialog'],
                         help = 'base model')
 
-    parser.add_argument('--dataset_name', default='IEMOCAP',  type= str, help='dataset name, IEMOCAP or MELD or DailyDialog')
+    parser.add_argument('--dataset_name', default='MELD',  type= str, help='dataset name, IEMOCAP or MELD or DailyDialog')
 
     parser.add_argument('--bert_dim', type=int, default=768)
     parser.add_argument('--hidden_dim', type=int, default=300)
@@ -63,7 +63,7 @@ if __name__ == '__main__':
 
     parser.add_argument('--batch_size', type=int, default=8, metavar='BS', help='batch size')
 
-    parser.add_argument('--modelname', type=str, default='IEMOCAP_xlnet_dialog',
+    parser.add_argument('--modelname', type=str, default='MELD_xlnet_dialog',
                         help='model name')
 
     parser.add_argument('--modelpath', type=str, default='saved_models/', help='model path')
